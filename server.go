@@ -2,12 +2,12 @@ package main
 
 import (
 	"db-api/models"
-
-	"github.com/labstack/echo/v4"
+	"db-api/routes"
 )
 
 func main() {
 	models.Setup()
-	e := echo.New()
+	e := routes.Setup()
+	
 	e.Start(":8080")
 }
